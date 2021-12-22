@@ -5,9 +5,10 @@ class BasePageLocators():
 	#pageSource = self.find(*BasePageLocators.TEXT_HTML).get_attribute("outerHTML")
 	#print(pageSource)
 	BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini a")
+	LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 class MainPageLocators():
-	LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+	pass
 	
 class LoginPageLocators():
 	LOGIN_FORM    = (By.CSS_SELECTOR, ".login_form") 

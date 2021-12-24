@@ -4,10 +4,12 @@ from selenium.common.exceptions import NoSuchElementException, \
 									   TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from .locators import BasePageLocators
+from .locators import BasePageLocators, \
+					  BasketPageLocators
 
 class BasePage():
 	
+
 	def __init__(self, browser, url, timeout=10):
 		self.browser = browser
 		self.url     = url
@@ -42,6 +44,16 @@ class BasePage():
 	def find(self, how, what):
 		return self.browser.find_element(how, what)
 		
+	def go_to_basket(self):
+		basket_button = self.find(*BasePageLocators.BASKET_BUTTON)
+		basket_button.click()
+		
+	def go_to_main_page(self):
+		link = "http://selenium1py.pythonanywhere.com/"
+		page = MainPage(browser, link)
+		page.open()
+		return page
+		
 	def should_be_go_to_login_page(self):
 		login_link = self.find(*BasePageLocators.LOGIN_LINK)
 		login_link.click()
@@ -52,6 +64,9 @@ class BasePage():
 	def should_be_login_link(self):
 		assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 		
+		
+
+
 
 	def solve_quiz_and_get_code(self):
 		alert = self.browser.switch_to.alert

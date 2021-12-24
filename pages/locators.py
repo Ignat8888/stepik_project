@@ -18,8 +18,13 @@ class ProductPageLocators():
 	ADD_PRODUCT_BUTTON = (By.CSS_SELECTOR, "#add_to_basket_form button")
 	PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
 	PRODUCT_PRICE = (By.CSS_SELECTOR, ".price_color")
-	SUCCESS_MESSAGE = (By.XPATH, "//div[@class='alertinner '][contains(text()[2],'был добавлен')]")
+	SUCCESS_MESSAGE = (By.XPATH, "//div[@class='alertinner '][contains(text()[2],'has been added')]")
 	
 class BasketPageLocators():
 	FIRST_ITEM_NAME = (By.CSS_SELECTOR, ".basket-items .col-sm-4 a")
 	TOTAL_COST = (By.CSS_SELECTOR, "#basket_totals .align-right") 
+	ITEMS_FORM = (By.CSS_SELECTOR, "#basket_formset")
+	MESSAGE_OF_EMPTY_BASKET = (By.XPATH, "//p[contains(text(),'Your basket is empty')]")
+	
+	
+	

@@ -6,6 +6,7 @@ class BasePageLocators():
 	#print(pageSource)
 	BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini a")
 	LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+	USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class MainPageLocators():
 	pass
@@ -13,6 +14,10 @@ class MainPageLocators():
 class LoginPageLocators():
 	LOGIN_FORM    = (By.CSS_SELECTOR, ".login_form") 
 	REGISTER_FORM = (By.CSS_SELECTOR, ".register_form")
+	REG_EMAIL_INPUT = (By.CSS_SELECTOR, "#id_registration-email")
+	REG_PWD_INPUT = (By.CSS_SELECTOR, "#id_registration-password1")
+	REG_CONF_PWD_INPUT = (By.CSS_SELECTOR, "#id_registration-password2")
+	REG_BUTTON = (By.CSS_SELECTOR, "button[name=registration_submit]")
 	
 class ProductPageLocators():
 	ADD_PRODUCT_BUTTON = (By.CSS_SELECTOR, "#add_to_basket_form button")
